@@ -1,26 +1,22 @@
-package model;
+package com.yandex.tasktracker.model;
 
 public class Task {
     protected String name;
     protected String description;
     protected int id;
-    protected Status status;
+    public Status status;
 
-    public Task(String name, String discription, int id, Status status) {
+    public Task(String name, String description) {
         this.name = name;
-        this.description = discription;
-        this.id = id;
-        this.status = status;
-    }
-
-    public Task() {
+        this.description = description;
+        this.status = Status.NEW;
     }
 
     @Override
     public String toString() {
         return "Task{" +
                 "name='" + name + '\'' +
-                ", discription='" + description + '\'' +
+                ", description='" + description + '\'' +
                 ", id=" + id +
                 ", status=" + status +
                 '}';
@@ -38,12 +34,12 @@ public class Task {
         }
     }
 
-    public String getDiscription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDiscription(String discription) {
-        this.description = discription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getName() {

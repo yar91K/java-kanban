@@ -1,11 +1,11 @@
-package model;
+package com.yandex.tasktracker.model;
 
 public class SubTask extends Task {
-    public Epic epic;
+    public final Integer epic;
 
 
-    public SubTask(String name, String discription, int id, Status status, Epic epic) {
-        super(name, discription, id, status);
+    public SubTask(String name, String description, Integer epic) {
+        super(name, description);
         this.epic = epic;
     }
 
@@ -14,7 +14,7 @@ public class SubTask extends Task {
         return "SubTask{" +
                 "epic=" + epic +
                 ", name='" + name + '\'' +
-                ", discription='" + description + '\'' +
+                ", description='" + description + '\'' +
                 ", id=" + id +
                 ", status=" + status +
                 '}';
