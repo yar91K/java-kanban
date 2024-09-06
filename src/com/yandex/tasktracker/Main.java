@@ -30,18 +30,22 @@ public class Main {
         taskManager.create(subTask1);
         taskManager.create(subTask2);
         taskManager.create(subTask3);
-        System.out.println(taskManager.showInfo());
+        System.out.println(taskManager.getTasks());
+        System.out.println(taskManager.getSubTasks());
+        System.out.println(taskManager.getEpic());
 
-        SubTask updatedSubTask = new SubTask(subTask2.getName(), subTask2.getDescription(), subTask2.epic);
+        SubTask updatedSubTask = new SubTask(subTask2.getName(), subTask2.getDescription(), subTask2.getEpicId());
         updatedSubTask.setId(subTask2.getId());
         updatedSubTask.setStatus(Status.DONE);
         taskManager.update(updatedSubTask);
-        System.out.println(taskManager.showInfo());
+        System.out.println(taskManager.getTasks());
+        System.out.println(taskManager.getSubTasks());
+        System.out.println(taskManager.getEpic());
 
         taskManager.removeTaskById(1);
         taskManager.removeSubTaskById(5);
-        System.out.println(taskManager.showInfo());
-
-
+        System.out.println(taskManager.getTasks());
+        System.out.println(taskManager.getSubTasks());
+        System.out.println(taskManager.getEpic());
     }
 }

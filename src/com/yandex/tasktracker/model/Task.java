@@ -4,7 +4,7 @@ public class Task {
     protected String name;
     protected String description;
     protected int id;
-    public Status status;
+    private Status status;
 
     public Task(String name, String description) {
         this.name = name;
@@ -27,11 +27,7 @@ public class Task {
     }
 
     public void setId(int id) {
-        if (id >= 0) {
-            this.id = id;
-        } else {
-            System.out.println("Передано некорректное id");
-        }
+        this.id = id;
     }
 
     public String getDescription() {
@@ -47,11 +43,7 @@ public class Task {
     }
 
     public void setName(String name) {
-        if (name.length() > 0) {
-            this.name = name;
-        } else {
-            System.out.println("Передано некоректное название!");
-        }
+        this.name = name;
     }
 
     public Status getStatus() {

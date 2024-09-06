@@ -22,6 +22,10 @@ public class Epic extends Task {
         subTaskList.remove(id);
     }
 
+    public void clearSubTaskList() {
+        subTaskList.clear();
+    }
+
     @Override
     public String toString() {
         return "Epic{" + "name='" + name + '\'' +

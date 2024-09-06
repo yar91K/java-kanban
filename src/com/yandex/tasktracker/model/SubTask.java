@@ -1,22 +1,25 @@
 package com.yandex.tasktracker.model;
 
 public class SubTask extends Task {
-    public final Integer epic;
-
+    private final Integer epicId;
 
     public SubTask(String name, String description, Integer epic) {
         super(name, description);
-        this.epic = epic;
+        this.epicId = epic;
     }
 
     @Override
     public String toString() {
         return "SubTask{" +
-                "epic=" + epic +
+                "epic=" + epicId +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +
-                ", status=" + status +
+                ", status=" + getStatus() +
                 '}';
+    }
+
+    public Integer getEpicId() {
+        return epicId;
     }
 }
