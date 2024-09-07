@@ -12,9 +12,9 @@ public class SubTask extends Task {
     public String toString() {
         return "SubTask{" +
                 "epic=" + epicId +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", id=" + id +
+                ", name='" + getName() + '\'' +
+                ", description='" + getDescription() + '\'' +
+                ", id=" + getId() +
                 ", status=" + getStatus() +
                 '}';
     }
